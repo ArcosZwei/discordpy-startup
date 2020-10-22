@@ -1,5 +1,33 @@
+# インストールした discord.py を読み込む
+import discord
+
+# 自分のBotのアクセストークンに置き換えてください
+TOKEN = 'NzY4NzA5MDQxNjI2OTM5NDIy.X5EaFQ.pX2Oi08tgL-gwOgYUi3g0pQTzf0'
+
+# 接続に必要なオブジェクトを生成
+client = discord.Client()
+
+# 起動時に動作する処理
+@client.event
+async def on_ready():
+    # 起動したらターミナルにログイン通知が表示される
+    print('ログインしました')
+
+# メッセージ受信時に動作する処理
+@client.event
+async def on_message(message):
+    # メッセージ送信者がBotだった場合は無視する
+    if message.author.bot:
+        return
+    # 「/neko」と発言したら「にゃーん」が返る処理
+    if message.content == '/neko':
+        await message.channel.send('にゃーん')
+
+# Botの起動とDiscordサーバーへの接続
+client.run(TOKEN)
+
 ID_CHANNEL_README = 192278756553916416 # 該当のチャンネルのID
-ID_ROLE_WELCOME = 270207945923362816 # 付けたい役職のID
+ID_ROLE_WELCOME = 768709394321244160 # 付けたい役職のID
 
 @client.event
 async def on_raw_reaction_add(payload):
