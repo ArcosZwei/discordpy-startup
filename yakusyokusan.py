@@ -1,5 +1,5 @@
 ID_CHANNEL_README = 192278756553916416 # 該当のチャンネルのID
-ID_ROLE_WELCOME = 768709394321244160 # 付けたい役職のID
+ID_ROLE_WELCOME = 270207945923362816 # 付けたい役職のID
 
 @client.event
 async def on_raw_reaction_add(payload):
