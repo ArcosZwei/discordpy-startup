@@ -2,7 +2,7 @@
 import discord
 
 # 自分のBotのアクセストークンに置き換えてください
-TOKEN = 'NzY4NzA5MDQxNjI2OTM5NDIy.X5EaFQ.pX2Oi08tgL-gwOgYUi3g0pQTzf0'
+TOKEN = 'NzY4NzA5MDQxNjI2OTM5NDIy.X5EaFQ.nIBpJNfeDsc9Ciw5qUSXetCAt-E'
 
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
@@ -25,7 +25,7 @@ async def on_message(message):
 
 # Botの起動とDiscordサーバーへの接続
 client.run(TOKEN)
-
+'''
 ID_CHANNEL_README = 192278756553916416 # 該当のチャンネルのID
 ID_ROLE_WELCOME = 768709394321244160 # 付けたい役職のID
 
@@ -52,3 +52,4 @@ async def on_raw_reaction_add(payload):
 
     # 分かりやすいように歓迎のメッセージを送る
     await channel.send('いらっしゃいませ！')
+'''
